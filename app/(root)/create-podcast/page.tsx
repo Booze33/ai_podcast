@@ -81,9 +81,9 @@ export function CreatePodcast() {
               name="podcastTitle"
               render={({ field }) => (
                 <FormItem className="flex flex-col gap-2.5">
-                  <FormLabel className="text-16 font-bold text-white-1">Username</FormLabel>
+                  <FormLabel className="text-16 font-bold text-white-1">Title</FormLabel>
                   <FormControl>
-                    <Input placeholder="Tebe podcast" {...field} className="input-class focus-visible:ring-orange-1"/>
+                    <Input placeholder="Tebe podcast" {...field} className="input-class focus-visible:ring-offset-orange-1"/>
                   </FormControl>
                   <FormMessage className="text-white-1" />
                 </FormItem>
@@ -96,7 +96,7 @@ export function CreatePodcast() {
               </Label>
 
               <Select onValueChange={(value) => setVoiceType(value)}>
-                <SelectTrigger className={cn('text-16 w-full border-none bg-black-1 text-gray-1')}>
+                <SelectTrigger className={cn('text-16 w-full border-none bg-black-1 text-gray-1 focus-visible:ring-offset-orange-1')}>
                   <SelectValue placeholder="Select AI voice" className="placeholder:text-gray-1" />
                 </SelectTrigger>
                 <SelectContent className="text-16 border-none bg-black-1 font-bold text-white-1 focus:ring-orange-1">
@@ -125,7 +125,7 @@ export function CreatePodcast() {
                 <FormItem className="flex flex-col gap-2.5">
                   <FormLabel className="text-16 font-bold text-white-1">Description</FormLabel>
                   <FormControl>
-                    <Textarea placeholder="Write a short podcast description" {...field} className="input-class focus-visible:ring-orange-1"/>
+                    <Textarea placeholder="Write a short podcast description" {...field} className="input-class focus-visible:ring-offset-orange-1"/>
                   </FormControl>
                   <FormMessage className="text-white-1" />
                 </FormItem>
